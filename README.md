@@ -5,7 +5,7 @@ Also check out https://github.com/robertapengelly/android-material-compoundbutto
 
 Preview
 
-![materialbuttonexample](https://cloud.githubusercontent.com/assets/5245027/22246905/08f32292-e22f-11e6-9472-9aaf5badbccd.gif)
+![materialcheckboxexample](https://cloud.githubusercontent.com/assets/5245027/22631391/1f3975fe-ec04-11e6-94ec-c594f3995a83.gif)
 
 # Installation
 
@@ -36,18 +36,21 @@ Preview
     
         <style name="AppTheme" parent="@android:style/Theme.NoTitleBar">
             <!-- Text colors -->
-            <item name="android:textColorPrimary">@color/primary_text_material_dark</item>
+            <item name="android:textColorPrimaryDisableOnly">@color/primary_text_disable_only_material_dark</item>
             <item name="android:textColorSecondary">@color/secondary_text_material_dark</item>
-            <item name="android:textColorTertiary">@color/secondary_text_material_dark</item>
-            <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
-            <item name="android:textColorHighdark">@color/highdarked_text_material_dark</item>
-            <item name="android:textColorLink">@color/link_text_material_dark</item>
             
-            <item name="android:textAppearanceButton">@style/TextAppearance.Material.Button</item>
-            <item name="android:buttonStyle">@style/Widget.Material.Button</item>
+            <!-- Text styles -->
+            <item name="android:textAppearance">@style/TextAppearance.Material</item>
+            
+            <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_material_anim</item>
+            
+            <!-- Widget styles -->
+            <item name="android:checkboxStyle">@style/Widget.Material.CompoundButton.CheckBox</item>
             
             <!-- Color palette -->
-            <item name="colorButtonNormal">@color/btn_default_material_dark</item>
+            <item name="colorAccent">@color/accent_material_dark</item>
+            <item name="colorControlNormal">?android:attr/textColorSecondary</item>
+            <item name="colorControlActivated">?attr/colorAccent</item>
             <item name="colorControlHighlight">@color/ripple_material_dark</item>
         </style>
     
@@ -55,47 +58,50 @@ Preview
     
         <style name="AppTheme" parent="@android:style/Theme.Holo.NoActionBar">
             <!-- Text colors -->
-            <item name="android:textColorPrimary">@color/primary_text_material_dark</item>
+            <item name="android:textColorPrimaryDisableOnly">@color/primary_text_disable_only_material_dark</item>
             <item name="android:textColorSecondary">@color/secondary_text_material_dark</item>
-            <item name="android:textColorTertiary">@color/secondary_text_material_dark</item>
-            <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
-            <item name="android:textColorHighdark">@color/highdarked_text_material_dark</item>
-            <item name="android:textColorLink">@color/link_text_material_dark</item>
             
-            <item name="android:textAppearanceButton">@style/TextAppearance.Material.Button</item>
-            <item name="android:buttonStyle">@style/Widget.Material.Button</item>
+            <!-- Text styles -->
+            <item name="android:textAppearance">@style/TextAppearance.Material</item>
+            
+            <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_material_anim</item>
+            
+            <!-- Widget styles -->
+            <item name="android:checkboxStyle">@style/Widget.Material.CompoundButton.CheckBox</item>
             
             <!-- Color palette -->
-            <item name="colorButtonNormal">@color/btn_default_material_dark</item>
+            <item name="colorAccent">@color/accent_material_dark</item>
+            <item name="colorControlNormal">?android:attr/textColorSecondary</item>
+            <item name="colorControlActivated">?attr/colorAccent</item>
             <item name="colorControlHighlight">@color/ripple_material_dark</item>
         </style>
     
     Lollipop and newer (values-v21/styles.xml)
     
         <style name="AppTheme" parent="@android:style/Theme.Material.NoActionBar">
-            <!-- Text colors -->
-            <item name="android:textColorPrimary">@color/primary_text_material_dark</item>
+            <!-- Text colors -->
+            <item name="android:textColorPrimaryDisableOnly">@color/primary_text_disable_only_material_dark</item>
             <item name="android:textColorSecondary">@color/secondary_text_material_dark</item>
-            <item name="android:textColorTertiary">@color/secondary_text_material_dark</item>
-            <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
-            <item name="android:textColorHighdark">@color/highdarked_text_material_dark</item>
-            <item name="android:textColorLink">@color/link_text_material_dark</item>
             
-            <item name="android:textAppearanceButton">@style/TextAppearance.Material.Button</item>
-            <item name="android:buttonStyle">@style/Widget.Material.Button</item>
+            <!-- Text styles -->
+            <item name="android:textAppearance">@style/TextAppearance.Material</item>
+            
+            <item name="android:listChoiceIndicatorMultiple">@drawable/btn_check_material_anim</item>
+            
+            <!-- Widget styles -->
+            <item name="android:checkboxStyle">@style/Widget.Material.CompoundButton.CheckBox</item>
             
             <!-- Color palette -->
-            <item name="android:colorButtonNormal">@color/btn_default_material_dark</item>
+            <item name="android:colorAccent">@color/accent_material_dark</item>
+            <item name="android:colorControlNormal">?android:attr/textColorSecondary</item>
+            <item name="android:colorControlActivated">?android:attr/colorAccent</item>
             <item name="android:colorControlHighlight">@color/ripple_material_dark</item>
-        </style>
+        </style>
     
     Adding a MaterialButton widget (layout/activity_main.xml)
     
-    If you use android:elevation it will be replaced with app:elevation.
-    If you use android:textAllCaps it will be replaced with app:textAllCaps.
-    
-    If you want to use a ripple background on all-devices add app:background="@drawable/your_drawable_name" and it will be inflated.
-    When you use app:background it will only take effect if there's no background.
+    If you use android:buttonTint it will be replaced with app:buttonTint.
+    If you use android:buttonTintMode it will be replaced with app:buttonTintMode.
     
         <?xml version="1.0" encoding="utf-8" ?>
         <LinearLayout
@@ -105,11 +111,10 @@ Preview
             android:layout_width="match_parent"
             android:orientation="vertical">
             
-            <robertapengelly.support.widget.MaterialButton
+            <robertapengelly.support.widget.MaterialCheckBox
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="MaterialButton"
-                app:elevation="4dp"
-                app:textAllCaps="false" />
+                android:text="MaterialCheckBox"
+                app:buttonTint="#0000ff" />
         
         </LinearLayout>
