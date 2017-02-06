@@ -100,8 +100,8 @@ Preview
     
     Adding a MaterialCheckBox widget (layout/activity_main.xml)
     
-    If you use android:buttonTint it will be replaced with app:buttonTint.
-    If you use android:buttonTintMode it will be replaced with app:buttonTintMode.
+    If you use android:buttonTint it will be replaced with app:buttonTint if present.
+    If you use android:buttonTintMode it will be replaced with app:buttonTintMode if present.
     
         <?xml version="1.0" encoding="utf-8" ?>
         <LinearLayout
