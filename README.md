@@ -98,7 +98,7 @@ Preview
             <item name="android:colorControlHighlight">@color/ripple_material_dark</item>
         </style>
     
-    Adding a MaterialButton widget (layout/activity_main.xml)
+    Adding a MaterialCheckBox widget (layout/activity_main.xml)
     
     If you use android:buttonTint it will be replaced with app:buttonTint.
     If you use android:buttonTintMode it will be replaced with app:buttonTintMode.
