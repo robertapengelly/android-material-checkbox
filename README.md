@@ -1,4 +1,4 @@
-# MaterialButton
+# MaterialCheckBox
 
 Backported material styled CheckBox for use on pre-lollipop devices. Supports Android 2.3 API 9 (GINGERBREAD) and up.<br /><br />
 Also check out https://github.com/robertapengelly/android-material-compoundbutton as MaterialCheckBox extends MaterialCompoundButton.
