@@ -1,7 +1,7 @@
 # MaterialButton
 
-Backported material styled Button for use on pre-lollipop devices. Supports Android 2.3 API 9 (GINGERBREAD) and up.<br />
-Also check out https://github.com/robertapengelly/android-material-textview as MaterialButton extends MaterialTextView.
+Backported material styled CheckBox for use on pre-lollipop devices. Supports Android 2.3 API 9 (GINGERBREAD) and up.<br /><br />
+Also check out https://github.com/robertapengelly/android-material-compoundbutton as MaterialCheckBox extends MaterialCompoundButton.
 
 Preview
 
@@ -23,7 +23,7 @@ Preview
     Step 2. Add the dependency
     
     dependencies {
-        compile 'com.github.robertapengelly:android-material-button:1.0.4'
+        compile 'com.github.robertapengelly:android-material-checkbox:1.0.0'
     }
 
 # Usage
